@@ -1,0 +1,36 @@
+
+# Where to write outputs
+output_dir: "./_git_time_output"
+# Where remote repos get cloned
+cache_dir: "./_git_time_cache"
+
+# One or more email addresses that appear in your Git commit author field.
+authors:
+  - "user@email.com"
+
+# Repositories to analyze. Local paths or HTTPS Git URLs.
+repos:
+  # Local clones
+  - "/path/to/local/repo"
+  - "/another/local/repo"
+  # Or remote URLs (these will be cloned to cache_dir)
+  # - "https://github.com/yourname/yourrepo.git"
+
+# Optional date filters (inclusive). Format YYYY-MM-DD.
+since: "2025-01-01"
+until: "2025-12-31"
+
+# Sessionization parameters
+session_gap_minutes: 90
+min_session_minutes: 10
+
+# Optional chart title
+chart_title: "My Git-based time estimate"
+
+# Optional: auto-discover repos from GitHub account
+github_auto_discovery:
+  enabled: true
+  user: "github_username"
+  token_env_var: "GITHUB_TOKEN"
+  include_private: true
+  max_repos: 200
